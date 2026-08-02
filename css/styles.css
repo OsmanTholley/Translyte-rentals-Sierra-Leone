@@ -1765,6 +1765,12 @@ button, input, select, textarea {
     gap: 1.75rem;
   }
 
+  /* Hide Quick Navigation & Rental Services links in mobile footer */
+  .footer-grid > .footer-col:nth-child(2),
+  .footer-grid > .footer-col:nth-child(3) {
+    display: none !important;
+  }
+
   .footer-desc {
     font-size: 0.85rem;
   }
