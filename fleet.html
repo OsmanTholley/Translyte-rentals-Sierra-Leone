@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Our Fleet | Translate Corps Rentals Sierra Leone</title>
+  <meta name="description" content="Browse our complete vehicle fleet in Sierra Leone. Executive SUVs, Toyota Prado, Land Cruiser V8, Hilux 4x4s, Sedans, Minibuses, and Luxury Wedding Cars.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-info">
+        <div class="top-bar-item">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Freetown, Sierra Leone
+        </div>
+        <div class="top-bar-item">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          Mon – Sat: 8:00 AM – 6:00 PM | 24/7 Support
+        </div>
+      </div>
+      <div class="top-bar-info">
+        <a href="tel:+23279127724" class="top-bar-item" style="color:var(--primary); font-weight:600;">
+          +232 79127724 / +232 31843928
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.jpg" alt="TCR Translate Corps Rentals Logo" class="logo-img" />
+        <div class="logo-text">
+          TRANSLATE CORPS<span>RENTALS</span>
+          <span class="logo-tag">Rent Anything, Anytime, Anywhere</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="fleet.html" class="nav-link active">Our Fleet</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="corporate.html" class="nav-link">Corporate & NGOs</a></li>
+        <li><a href="faqs.html" class="nav-link">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="fleet.html" class="btn btn-primary btn-sm">Book Vehicle</a>
+        <button class="menu-toggle" aria-label="Toggle Navigation">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Banner -->
+  <section class="hero" style="min-height: 40vh; padding: 4rem 0 2rem 0;">
+    <div class="hero-bg-overlay"></div>
+    <div class="container" style="position: relative; z-index: 2; text-align: center;">
+      <div class="badge">Modern Insured Fleet</div>
+      <h1 class="section-title">Our Complete <span>Vehicle Fleet</span></h1>
+      <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+        Choose from our wide range of regularly serviced, fully insured executive SUVs, 4x4 project trucks, luxury wedding cars, and passenger buses.
+      </p>
+    </div>
+  </section>
+
+  <!-- Fleet Section with Filter Tabs -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="fleet-tabs">
+        <button class="fleet-tab active" data-filter="all">All Vehicles</button>
+        <button class="fleet-tab" data-filter="suvs">Executive SUVs & 4x4s</button>
+        <button class="fleet-tab" data-filter="pickups">Pickups & Field Trucks</button>
+        <button class="fleet-tab" data-filter="sedans">Sedans & City Cars</button>
+        <button class="fleet-tab" data-filter="vans">Minibuses & Staff Buses</button>
+        <button class="fleet-tab" data-filter="luxury">Luxury & Wedding Cars</button>
+        <button class="fleet-tab" data-filter="construction">Equipment & Logistics</button>
+      </div>
+
+      <!-- Fleet Grid -->
+      <div id="fleet-grid" class="fleet-grid">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button id="modal-close-btn" class="modal-close">&times;</button>
+      <div style="margin-bottom: 1.5rem;">
+        <span class="badge">Instant Reservation</span>
+        <h3 id="modal-vehicle-name" style="font-size: 1.8rem; margin-top: 0.3rem;">Vehicle Name</h3>
+        <p id="modal-vehicle-price" style="color: var(--primary); font-weight: 700; font-size: 1.2rem;">NLe 3,450 / day</p>
+      </div>
+
+      <form id="modal-booking-form">
+        <input type="hidden" id="modal-vehicle-id" value="" />
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Your Full Name</label>
+            <input type="text" id="client-name" class="form-input" placeholder="e.g. Osman Bangura" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone / WhatsApp</label>
+            <input type="tel" id="client-phone" class="form-input" placeholder="e.g. +232 79 123 456" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Service Type</label>
+            <select id="modal-service-type" class="form-select">
+              <option value="Daily Vehicle Rental">Daily Vehicle Rental</option>
+              <option value="Airport Transfer">Airport Transfer (Lungi)</option>
+              <option value="Corporate / Long Term Lease">Corporate / Long Term Lease</option>
+              <option value="Wedding / VIP Chauffeur">Wedding / VIP Chauffeur</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Driver Option</label>
+            <select id="modal-driver-opt" class="form-select">
+              <option value="Chauffeur Included">With Professional Driver</option>
+              <option value="Self Drive">Self-Drive</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Pickup Location</label>
+          <input type="text" id="modal-pickup-loc" class="form-input" value="Freetown, Sierra Leone" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Pickup Date</label>
+            <input type="date" id="modal-pickup-date" class="form-input" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Return Date</label>
+            <input type="date" id="modal-return-date" class="form-input" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Special Requests / Notes (Optional)</label>
+          <textarea id="modal-notes" class="form-input" rows="2" placeholder="e.g. Flight number, extra luggage space, baby seat needed..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 1rem; justify-content: center;">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.763.459 3.485 1.332 5.002l-1.416 5.176 5.297-1.389c1.464.798 3.118 1.218 4.774 1.219h.004c5.506 0 9.989-4.478 9.99-9.985.001-2.669-1.034-5.178-2.918-7.062a9.919 9.919 0 00-7.073-2.945z"/></svg>
+          Confirm Reservation on WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top-banner">
+        <div class="footer-banner-info">
+          <h3>Need an Executive 4x4 or Emergency Airport Transfer?</h3>
+          <p>We operate 24/7 across Freetown, Lungi Airport, and all 16 Districts of Sierra Leone.</p>
+        </div>
+        <div class="footer-banner-action">
+          <a href="https://wa.me/23279127724?text=Hello%20Translate%20Corps%20Rentals,%20I%20need%20a%20vehicle%20reservation." target="_blank" class="btn btn-whatsapp">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.763.459 3.485 1.332 5.002l-1.416 5.176 5.297-1.389c1.464.798 3.118 1.218 4.774 1.219h.004c5.506 0 9.989-4.478 9.99-9.985.001-2.669-1.034-5.178-2.918-7.062a9.919 9.919 0 00-7.073-2.945z"/></svg>
+            WhatsApp 24/7 Hotline
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <!-- Column 1: Brand & Overview -->
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="TCR Translate Corps Rentals Logo" class="logo-img" />
+            <div class="logo-text">
+              TRANSLATE CORPS<span>RENTALS</span>
+              <span class="logo-tag">Rent Anything, Anytime, Anywhere</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Sierra Leone's premier vehicle and fleet rental partner. Providing fully insured 4x4 Land Cruisers, Prado SUVs, Hilux Pickups, Minibuses, and VIP Chauffeur services nationwide.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">🛡️ Fully Insured</span>
+            <span class="footer-badge">📍 16 Districts</span>
+            <span class="footer-badge">⚡ 24/7 Support</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-title">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="fleet.html">Our Fleet Catalog</a></li>
+            <li><a href="services.html">Mobility Services</a></li>
+            <li><a href="corporate.html">Corporate & NGO Leasing</a></li>
+            <li><a href="faqs.html">Help & FAQs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Rental Services -->
+        <div class="footer-col">
+          <h4 class="footer-title">Rental Services</h4>
+          <ul class="footer-links">
+            <li><a href="fleet.html">Executive 4x4 SUVs</a></li>
+            <li><a href="fleet.html">4x4 Field Pickups</a></li>
+            <li><a href="services.html">Airport Transfers (Lungi)</a></li>
+            <li><a href="services.html">Chauffeur Services</a></li>
+            <li><a href="services.html">Wedding & VIP Car Hire</a></li>
+            <li><a href="corporate.html">NGO Project Fleet</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Office -->
+        <div class="footer-col">
+          <h4 class="footer-title">Contact & Office</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              <span>Freetown, Sierra Leone (Nationwide Service)</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h32 2 0 012 2v3.28a1 1 0 01-.684.948l-4.493 1.498a1 1 0 01-1.21-.502l-1.13-2.257a11.042 11.042 0 00-5.516 5.516l2.257 1.13a1 1 0 01.502 1.21l-1.498 4.493a1 1 0 01-.949.684H5a2 2 0 01-2-2V5z"></path></svg>
+              <a href="tel:+23279127724">+232 79127724 / +232 31843928</a>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              <a href="mailto:info@translaterentals.com">info@translaterentals.com</a>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>Mon – Sat: 8:00 AM – 6:00 PM | 24/7 Support</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Translate Corps Rentals (TCR) Sierra Leone. All rights reserved.</p>
+        <p class="footer-tagline">Rent Anything, Anytime, Anywhere across Sierra Leone</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action Button -->
+  <a href="https://wa.me/23279127724?text=Hello%20Translate%20Corps%20Rentals,%20I%20have%20an%20inquiry." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.763.459 3.485 1.332 5.002l-1.416 5.176 5.297-1.389c1.464.798 3.118 1.218 4.774 1.219h.004c5.506 0 9.989-4.478 9.99-9.985.001-2.669-1.034-5.178-2.918-7.062a9.919 9.919 0 00-7.073-2.945z"/></svg>
+  </a>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
