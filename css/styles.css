@@ -1522,6 +1522,11 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
+  /* Hide top notification bar on mobile mode */
+  .top-bar {
+    display: none !important;
+  }
+
   .nav-container {
     height: 72px;
     padding: 0 1rem;
