@@ -1510,6 +1510,7 @@ button, input, select, textarea {
 @media (max-width: 768px) {
   .nav-container {
     height: 72px;
+    padding: 0 1rem;
   }
 
   .logo-img {
@@ -1525,6 +1526,53 @@ button, input, select, textarea {
     max-height: calc(100vh - 72px);
   }
 
+  .top-bar-content {
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+  }
+
+  .top-bar-info {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .section-padding {
+    padding: 3.5rem 0;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 6vw, 2.3rem);
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 3.5rem 0 2rem 0;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2rem, 7.5vw, 3.2rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
   .hero-controls-container {
     flex-direction: column;
     justify-content: center;
@@ -1536,10 +1584,160 @@ button, input, select, textarea {
   .hero-vehicle-badge {
     font-size: 0.78rem;
     padding: 0.4rem 1rem;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .quick-search-card {
+    padding: 1.5rem 1.15rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem;
+  }
+
+  .fleet-grid, .services-grid, .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .fleet-tabs {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.75rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    scrollbar-width: none;
+  }
+
+  .fleet-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .fleet-tab {
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    padding: 0.5rem 1.1rem;
+  }
+
+  .corporate-banner {
+    padding: 2rem 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .corporate-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .airport-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1.15rem;
+    gap: 1rem;
+  }
+
+  .contact-info-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .footer-top-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.75rem 1.25rem;
+    gap: 1.2rem;
+  }
+
+  .footer-banner-action {
+    width: 100%;
+  }
+
+  .footer-banner-action .btn {
+    width: 100%;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .modal-card {
+    padding: 1.5rem 1.15rem;
+    width: 95%;
+    max-height: 92vh;
+  }
+
+  .modal-card .form-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .logo-text {
+    font-size: 0.92rem;
+  }
+
+  .logo-tag {
+    display: none;
+  }
+
+  .logo-img {
+    height: 38px;
+  }
+
+  .nav-cta .btn-primary {
+    display: none;
+  }
+
+  .hero-highlights {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .vehicle-specs {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .vehicle-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+    text-align: center;
+  }
+
+  .vehicle-footer .btn {
+    width: 100%;
+  }
+
+  .floating-whatsapp {
+    width: 52px;
+    height: 52px;
+    bottom: 1.2rem;
+    right: 1.2rem;
+  }
+
+  .floating-whatsapp svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .top-bar-item {
+    font-size: 0.78rem;
   }
 }
 
